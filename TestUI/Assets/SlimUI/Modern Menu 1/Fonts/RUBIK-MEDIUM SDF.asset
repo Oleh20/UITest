@@ -36,7 +36,7 @@ MonoBehaviour:
     m_StrikethroughThickness: 4.4
     m_TabWidth: 20
   m_Material: {fileID: 21148088844906328}
-  m_SourceFontFileGUID: f26bf9d84ad51194986c3ce2e3fc49ce
+  m_SourceFontFileGUID: 0000000000000000e000000000000000
   m_CreationSettings:
     sourceFontFileName: 
     sourceFontFileGUID: f26bf9d84ad51194986c3ce2e3fc49ce
@@ -45724,6 +45724,7 @@ Material:
     - _BumpFace: 0
     - _BumpOutline: 0
     - _ColorMask: 15
+    - _CullMode: 0
     - _Diffuse: 0.5
     - _FaceDilate: 0
     - _FaceUVSpeedX: 0
@@ -45748,6 +45749,7 @@ Material:
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
+    - _Sharpness: 0
     - _SpecularPower: 2
     - _Stencil: 0
     - _StencilComp: 8

@@ -14,12 +14,14 @@ public class InputDeviceDetector : IInputDeviceDetector, IDisposable
     {
         InputSystem.onEvent += OnInputEvent;
         InputSystem.onDeviceChange += OnDeviceChange;
+        UpdateDeviceTypeFromConnectedDevices();
     }
     private void OnDeviceChange(InputDevice device, InputDeviceChange change)
     {
         switch (change)
         {
             case InputDeviceChange.Removed:
+            case InputDeviceChange.Reconnected:
             case InputDeviceChange.Added:
             case InputDeviceChange.Disconnected:
                 UpdateDeviceTypeFromConnectedDevices();

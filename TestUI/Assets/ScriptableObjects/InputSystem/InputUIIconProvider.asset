@@ -16,16 +16,24 @@ MonoBehaviour:
   - deviceType: 0
     icons:
     - action: {fileID: 392368643174621059, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-      sprite: {fileID: 176924562, guid: 069a00c4a21d8654bbe27600f3ba7103, type: 3}
+      sprite: {fileID: 176924562, guid: ad2520e0638d6044fb92a7e5f618471e, type: 3}
+    - action: {fileID: 7727032971491509709, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+      sprite: {fileID: -412285690, guid: ad2520e0638d6044fb92a7e5f618471e, type: 3}
   - deviceType: 1
     icons:
     - action: {fileID: 392368643174621059, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-      sprite: {fileID: -725581648, guid: 069a00c4a21d8654bbe27600f3ba7103, type: 3}
+      sprite: {fileID: -725581648, guid: ad2520e0638d6044fb92a7e5f618471e, type: 3}
+    - action: {fileID: 7727032971491509709, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+      sprite: {fileID: -666183619, guid: ad2520e0638d6044fb92a7e5f618471e, type: 3}
   - deviceType: 2
     icons:
     - action: {fileID: 392368643174621059, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-      sprite: {fileID: -390365173, guid: 069a00c4a21d8654bbe27600f3ba7103, type: 3}
+      sprite: {fileID: 461571114, guid: ad2520e0638d6044fb92a7e5f618471e, type: 3}
+    - action: {fileID: 7727032971491509709, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+      sprite: {fileID: -390365173, guid: ad2520e0638d6044fb92a7e5f618471e, type: 3}
   - deviceType: 3
     icons:
     - action: {fileID: 392368643174621059, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-      sprite: {fileID: -725581648, guid: 069a00c4a21d8654bbe27600f3ba7103, type: 3}
+      sprite: {fileID: -725581648, guid: ad2520e0638d6044fb92a7e5f618471e, type: 3}
+    - action: {fileID: 7727032971491509709, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+      sprite: {fileID: -666183619, guid: ad2520e0638d6044fb92a7e5f618471e, type: 3}

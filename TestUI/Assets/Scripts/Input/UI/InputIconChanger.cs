@@ -29,7 +29,7 @@ namespace GameInputSystem
 
         private void OnDeviceChanged(InputDeviceType deviceType)
         {
-            if (_action == null) return;
+            if (_action == null || _icon == null) return;
 
             _icon.sprite = _iconProvider.GetIconForAction(_action, deviceType);
         }
