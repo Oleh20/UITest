@@ -1,6 +1,5 @@
-using UnityEngine;
 using GameInputSystem;
-using UnityEditor.Hardware;
+using UnityEngine;
 
 public abstract class InputDeviceReactive : MonoBehaviour, IDeviceChangeHandler
 {
@@ -18,6 +17,6 @@ public abstract class InputDeviceReactive : MonoBehaviour, IDeviceChangeHandler
     protected bool CheckOnDevice(InputDeviceType newDevice)
     {
         return newDevice == InputDeviceType.Xbox || newDevice == InputDeviceType.DualSense || newDevice == InputDeviceType.OtherGamepad;
-    } 
+    }
     public abstract void OnDeviceChanged(InputDeviceType newDevice);
 }
