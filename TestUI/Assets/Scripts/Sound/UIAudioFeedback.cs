@@ -13,24 +13,32 @@ public class UIAudioFeedback : MonoBehaviour, ISelectHandler, ISubmitHandler, IP
     public void OnSelect(BaseEventData eventData)
     {
         if (_useHoverSound)
-            UIAudioManager.Instance.PlayHover();
+            PlayHover();
     }
 
     public void OnSubmit(BaseEventData eventData)
     {
         if (_useClickSound)
-            UIAudioManager.Instance.PlayClick();
+            PlayClick();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (_useHoverSound)
-            UIAudioManager.Instance.PlayHover();
+            PlayHover();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         if (_useClickSound)
-            UIAudioManager.Instance.PlayClick();
+            PlayClick();
+    }
+    public void PlayClick()
+    {
+        UIAudioManager.Instance.PlayClick();
+    }
+    public void PlayHover()
+    {
+        UIAudioManager.Instance.PlayHover();
     }
 }

@@ -1,6 +1,7 @@
 using GameInputSystem;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 public enum MenuName
 {
     MainMenu,
@@ -9,7 +10,7 @@ public enum MenuName
     CreditsScreen,
     LoadGameScreen
 }
-public class BasicMenu : MonoBehaviour
+public class BasicMenu : InputDeviceReactive, IDeviceChangeHandler
 {
     [SerializeField] protected List<MenuItem> _menus;
     [SerializeField] protected MenuName _startScreen;
@@ -29,6 +30,13 @@ public class BasicMenu : MonoBehaviour
         OpenMenu(_startScreen);
         InputReader.Instance.OnUISubmit += SkipTitleScreen;
         InputReader.Instance.OnUICancel += CancelEvent;
+    }
+    public override void OnDeviceChanged(InputDeviceType newDevice)
+    {
+        if (_currentMenu != null && CheckOnDevice(newDevice) && EventSystem.current.currentSelectedGameObject == null)
+        {
+            (_currentMenu as BaseToggleItem)?.ReselectFirst();
+        }
     }
     private void CancelEvent()
     {
@@ -65,7 +73,7 @@ public class BasicMenu : MonoBehaviour
             {
                 if (_currentMenu == menu)
                     return;
-               
+
                 menu.Open();
                 _currentMenu = menu;
             }

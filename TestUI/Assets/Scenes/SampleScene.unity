@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 66440475}
   - component: {fileID: 66440474}
   - component: {fileID: 66440473}
+  - component: {fileID: 66440476}
   m_Layer: 5
   m_Name: SensitivityYSlider
   m_TagString: Untagged
@@ -291,7 +292,19 @@ MonoBehaviour:
   m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &66440475
 RectTransform:
   m_ObjectHideFlags: 0
@@ -314,6 +327,20 @@ RectTransform:
   m_AnchoredPosition: {x: 379, y: 117.00006}
   m_SizeDelta: {x: 401, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &66440476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66440472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3ea7c8336d72c40bff9fe7d89f9db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _useClickSound: 1
+  _useHoverSound: 1
 --- !u!1 &99557933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,7 +3852,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6062,6 +6089,9 @@ MonoBehaviour:
   - {fileID: 148457939}
   _iconProvider: {fileID: 11400000, guid: ede0ea04f520df34cab36234537cd9f8, type: 2}
   _cursorController: {fileID: 632285249}
+  _deviceChangeHandlers:
+  - {fileID: 1698611124}
+  - {fileID: 1887772206}
 --- !u!114 &632285247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10151,6 +10181,7 @@ GameObject:
   - component: {fileID: 978959133}
   - component: {fileID: 978959132}
   - component: {fileID: 978959131}
+  - component: {fileID: 978959134}
   m_Layer: 5
   m_Name: SmoothingSlider
   m_TagString: Untagged
@@ -10237,7 +10268,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &978959133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10260,6 +10303,20 @@ RectTransform:
   m_AnchoredPosition: {x: 379, y: 50}
   m_SizeDelta: {x: 401, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &978959134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978959130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3ea7c8336d72c40bff9fe7d89f9db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _useClickSound: 1
+  _useHoverSound: 1
 --- !u!1 &979672628
 GameObject:
   m_ObjectHideFlags: 0
@@ -16788,6 +16845,7 @@ GameObject:
   - component: {fileID: 1484775272}
   - component: {fileID: 1484775271}
   - component: {fileID: 1484775270}
+  - component: {fileID: 1484775273}
   m_Layer: 5
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -16887,9 +16945,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1016833945}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SlimUI.ModernMenu.UISettingsManager, Assembly-CSharp
-        m_MethodName: MusicSlider
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SlimUI.ModernMenu.CheckMusicVolume, Assembly-CSharp
+        m_MethodName: UpdateVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16933,6 +17003,20 @@ RectTransform:
   m_AnchoredPosition: {x: 379, y: 185}
   m_SizeDelta: {x: 401, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1484775273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484775269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3ea7c8336d72c40bff9fe7d89f9db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _useClickSound: 1
+  _useHoverSound: 1
 --- !u!1 &1492041817
 GameObject:
   m_ObjectHideFlags: 0
@@ -21276,6 +21360,7 @@ GameObject:
   - component: {fileID: 1956907786}
   - component: {fileID: 1956907785}
   - component: {fileID: 1956907784}
+  - component: {fileID: 1956907787}
   m_Layer: 5
   m_Name: SensitivityXSlider
   m_TagString: Untagged
@@ -21362,7 +21447,19 @@ MonoBehaviour:
   m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1956907786
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21385,6 +21482,20 @@ RectTransform:
   m_AnchoredPosition: {x: 379, y: 184}
   m_SizeDelta: {x: 401, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1956907787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956907783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3ea7c8336d72c40bff9fe7d89f9db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _useClickSound: 1
+  _useHoverSound: 1
 --- !u!1 &1961479945
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,4 +41,13 @@ public class BaseToggleItem : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(_firstSelected);
         }
     }
+    public void ReselectFirst()
+    {
+        if (_firstSelected != null && EventSystem.current.currentSelectedGameObject == null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(_firstSelected);
+        }
+    }
+
 }

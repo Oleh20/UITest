@@ -1,5 +1,5 @@
-using UnityEngine;
 using GameInputSystem;
+using UnityEngine;
 
 public class CursorVisibilityController : MonoBehaviour
 {
@@ -27,7 +27,7 @@ public class CursorVisibilityController : MonoBehaviour
         if (hideCursorWhenUsingGamepad)
         {
             Cursor.visible = !isGamepad;
-            Cursor.lockState = isGamepad ? CursorLockMode.Locked : CursorLockMode.None;
+            Cursor.lockState = isGamepad ? CursorLockMode.Confined : CursorLockMode.None;
         }
     }
 }

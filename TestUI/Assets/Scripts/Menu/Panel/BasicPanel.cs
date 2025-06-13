@@ -1,10 +1,14 @@
+using GameInputSystem;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class BasicPanel : MonoBehaviour
+public class BasicPanel : InputDeviceReactive
 {
     [SerializeField] private List<PanelItem> _panels;
     [SerializeField] private PanelName _openPanel;
+
+    private PanelItem _currentPanel;
     public void OpenPanel(PanelName name)
     {
         foreach (var panel in _panels)
@@ -26,11 +30,19 @@ public class BasicPanel : MonoBehaviour
             if (panel.PanelName.ToString() == name)
             {
                 panel.Open();
+                _currentPanel = panel;
             }
             else
             {
                 panel.Close();
             }
+        }
+    }
+    public override void OnDeviceChanged(InputDeviceType newDevice)
+    {
+        if (_currentPanel != null && CheckOnDevice(newDevice) && EventSystem.current.currentSelectedGameObject == null)
+        {
+            (_currentPanel as BaseToggleItem)?.ReselectFirst();
         }
     }
 }
